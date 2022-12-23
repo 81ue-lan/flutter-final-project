@@ -107,20 +107,21 @@ class TopNeuCard extends StatelessWidget {
           ),
         ),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30),
-            color: Colors.yellow[100],
-            boxShadow: [
-              BoxShadow(
-                  color: Colors.yellow.shade100,
-                  offset: Offset(4.0, 4.0),
-                  blurRadius: 10.0,
-                  spreadRadius: 1.0),
-              BoxShadow(
-                  color: Colors.white,
-                  offset: Offset(-4.0, -4.0),
-                  blurRadius: 15.0,
-                  spreadRadius: 1.0),
-            ]),
+          borderRadius: BorderRadius.circular(30),
+          color: Colors.yellow[100],
+
+          boxShadow: [
+            BoxShadow(
+              offset: Offset(2, 2),
+              blurRadius: 5,
+            ),
+          ],
+          image: DecorationImage(
+            image: AssetImage('assets/creditCard.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
+
       ),
     );
   }

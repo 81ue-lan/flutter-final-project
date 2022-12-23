@@ -6,6 +6,7 @@ import 'plus_button.dart';
 import 'top_card.dart';
 import 'transaction.dart';
 
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -21,6 +22,8 @@ class _HomePageState extends State<HomePage> {
   bool _isIncome = false;
 
   void _enterTransaction() {
+
+    DateTime _selectedDate;
     GoogleSheetsApi.insert(
       _textcontrollerITEM.text,
       _textcontrollerAMOUNT.text,
@@ -31,6 +34,8 @@ class _HomePageState extends State<HomePage> {
 
   // 新增一筆收入/支出
   void _newTransaction() {
+    DateTime _selectedDate = DateTime.now();
+
     showDialog(
         barrierDismissible: false,
         context: context,
@@ -98,8 +103,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ],
                       ),
-                    ],
-                  ),
+                  ]),
                 ),
                 actions: <Widget>[
                   MaterialButton(
@@ -143,7 +147,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    // start loading until the data arrives
+
     if (GoogleSheetsApi.loading == true && timerHasStarted == false) {
       startLoading();
     }
