@@ -112,9 +112,10 @@ class TopNeuCard extends StatelessWidget {
 
           boxShadow: [
             BoxShadow(
-              offset: Offset(2, 2),
-              blurRadius: 5,
-            ),
+            color: Colors.white,
+            offset: Offset(-4.0, -4.0),
+            blurRadius: 15.0,
+            spreadRadius: 1.0),
           ],
           image: DecorationImage(
             image: AssetImage('assets/creditCard.png'),
