@@ -16,16 +16,16 @@ class TopNeuCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(4.0),
       child: Container(
-        height: 200,
+        height: 210,
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text('結餘',
-                  style: TextStyle(color: Colors.cyan[600], fontSize: 16)),
+                  style: TextStyle(color:  Colors.grey[200], fontSize: 16)),
               Text(
                 '\$' + balance,
-                style: TextStyle(color: Colors.grey[800], fontSize: 40),
+                style: TextStyle(color: Colors.yellow, fontSize: 40),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -38,7 +38,7 @@ class TopNeuCard extends StatelessWidget {
                           padding: EdgeInsets.all(10),
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            color: Colors.lightBlue[100],
+                            color: Colors.lightGreen[100],
                           ),
                           child: Center(
                             child: Icon(
@@ -54,13 +54,13 @@ class TopNeuCard extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text('總收入',
-                                style: TextStyle(color: Colors.cyan[600])),
+                                style: TextStyle(color: Colors.green)),
                             SizedBox(
                               height: 5,
                             ),
                             Text('\$' + income,
                                 style: TextStyle(
-                                    color: Colors.grey[600],
+                                    color: Colors.grey[100],
                                     fontWeight: FontWeight.bold)),
                           ],
                         )
@@ -72,7 +72,7 @@ class TopNeuCard extends StatelessWidget {
                           padding: EdgeInsets.all(10),
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            color: Colors.lightBlue[100],
+                            color: Colors.red[50],
                           ),
                           child: Center(
                             child: Icon(
@@ -88,13 +88,13 @@ class TopNeuCard extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text('總支出',
-                                style: TextStyle(color: Colors.cyan[600])),
+                                style: TextStyle(color: Colors.red)),
                             SizedBox(
                               height: 5,
                             ),
                             Text('\$' + expense,
                                 style: TextStyle(
-                                    color: Colors.grey[600],
+                                    color: Colors.grey[100],
                                     fontWeight: FontWeight.bold)),
                           ],
                         )
@@ -108,8 +108,6 @@ class TopNeuCard extends StatelessWidget {
         ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
-          color: Colors.yellow[100],
-
           boxShadow: [
             BoxShadow(
             color: Colors.white,
